@@ -1,43 +1,5 @@
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #393E41;
-        color: white;
-    }
-
-    blockquote {
-      background: #393E41;
-    }
-
-    a {
-      color: #EBC3DB;
-    }
-
-    header {
-      background: #393E41;
-      border-bottom: 2px dotted #EBC3DB;
-
-    }
-
-    .article-meta, .menu a {
-      background: #393E41;
-      color: white;
-    }
-
-    table {
-      margin: auto;
-      border-top: 1px solid #666;
-      border-bottom: 1px solid #666;
-    }
-    table thead th { border-bottom: 1px solid #666; }
-    th, td { padding: 5px; }
-    tr:nth-child(even) { background: #666 }
-
-}
-
-
 /* Light mode */
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
     blockquote {
       background: #f9f9f9;
     }
@@ -65,13 +27,16 @@
     tr:nth-child(even) { background: #eee }
 
 }
-
+*/
 
 body {
   max-width: 800px;
   margin: auto;
   padding: .2em;
   line-height: 1.5em;
+  background-color: #faf7f0;
+  color: black;
+  font-size: 1.2rem;
 }
 
 h1 {
@@ -99,9 +64,12 @@ output:
   text-decoration: none;
   padding: 5px;
   border-radius: 5px;
-  border-style: dotted;
+  border-style: none;
   border-width: 1px;
-  margin: 20px 0px 20px 0px;
+  margin: 00px 0px 20px 0px;
+  color: #ff6e50;
+  position: relative;
+  right: 11em;
 }
 
 .terms { font-size: .9em; }
@@ -118,10 +86,14 @@ footer a { text-decoration: none; }
 
 a {
   text-decoration: none;
+  color: #4f040b;
 }
 
 a:hover {
-  text-decoration: underline;
+  background-color: #ffd5c2;
+  border-radius: 4px;
+  transition-property: background;
+  transition-duration: 0.2s;
 }
 
 /* Adjust background at your leisure! */
@@ -143,29 +115,27 @@ header nav {
 }
 
 header a {
-    color: #fff;
+	color: #000000;
     line-height: 1.75rem;
     padding: 0 0.5rem
-}
-header a:hover,
-header .current a {
-    color: #fff
 }
 
 /* Code Boxes */
 pre {
   border: 2px solid #EBC3DB;
-  padding: 1em;
+  padding: 0.3em 1em;
+  line-height: 1em;
   overflow-x: auto;
+  overflow-y: hidden;
 }
 pre code { background: none; }
 
 code {
   background-color: light-dark(#D6D6D6, #888);
   border-radius: 3px;
-  padding: 0.2em;
   overflow-x: auto;
 }
+
 
 /* Images, tables, misc. */
 img, iframe, video {
@@ -184,16 +154,17 @@ main {
   line-height: 1.7em;
   hyphens: auto;
   display: block;
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 main a {
   font-weight: bold;
 }
 
 blockquote {
-
   border-left: 5px solid #ccc;
-  padding: 3px 1em 3px;
+  padding: 0px 1em 0px;
+  position: relative;
+  right: 1.5em;
 }
 
 .content-wrapper {
@@ -206,6 +177,14 @@ blockquote {
   display: block;
 }
 
+table {
+      margin: auto;
+      border-top: 1px solid #666;
+      border-bottom: 1px solid #666;
+    }
+table thead th { border-bottom: 1px solid #666; }
+th, td { padding: 5px; }
+tr:nth-child(even) { background: #edd; }
 
 #table-of-contents {
 }
