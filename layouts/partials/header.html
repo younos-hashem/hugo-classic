@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="{{ . | absURL }}">
     {{- end }}
     {{ partial "head_custom.html" . }}
+
+    {{ if .Param "math" }}
+      {{ partialCached "math.html" . }}
+    {{ end }}
   </head>
 
   <body>
