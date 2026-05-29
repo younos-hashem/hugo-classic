@@ -186,6 +186,10 @@ blockquote {
   display: block;
 }
 
+.home-link {
+  margin-top: 5rem;
+}
+
 table {
       margin: auto;
       border-top: 1px solid #666;
@@ -197,6 +201,9 @@ tr:nth-child(even) { background: #edd; }
 
 #table-of-contents {
 }
+
+/* Custom superscript styling to not interfere with line height */
+sup { vertical-align: top; position: relative; top: -0.2em; font-size: 0.7em;}
 
 /* Small devices, phones */
 @media only screen and (min-width : 480px) {
@@ -244,7 +251,7 @@ span.sidenote {
   text-align: left;
 
   font-size: 100%;
-  line-height: 110%;
+  line-height: 100%;
   color: var(--secondary-color);
 
   /* add a vertical bar on the left side */
@@ -252,8 +259,9 @@ span.sidenote {
   border-left-color: var(--accent-color-2);
   border-left-style: solid;
   border-left-width: 1px;
+  
 }
 
-span.sidenote small {
-  font-size: 100%;
+.nowrap {
+  white-space: nowrap;
 }
