@@ -275,3 +275,12 @@ span.sidenote {
   float: left;
   margin-right: 1.5rem;
 }
+
+figcaption {
+  color: var(--secondary-color);
+  font-size: 80%;
+}
+
+figure {
+  margin: 0;
+}
