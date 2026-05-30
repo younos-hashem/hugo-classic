@@ -77,8 +77,8 @@ output:
   border-width: 1px;
   margin: 00px 0px 20px 0px;
   color: var(--accent-color-1);
-  position: relative;
-  right: 11em;
+  position: static;
+  right: unset;
 }
 
 .terms { font-size: .9em; }
@@ -199,38 +199,9 @@ table thead th { border-bottom: 1px solid #666; }
 th, td { padding: 5px; }
 tr:nth-child(even) { background: #edd; }
 
-#table-of-contents {
-}
 
 /* Custom superscript styling to not interfere with line height */
 sup { vertical-align: top; position: relative; top: -0.2em; font-size: 0.7em;}
-
-/* Small devices, phones */
-@media only screen and (min-width : 480px) {
-  #foxy {
-    min-width: 40px;
-    float: center;
-    padding: 10px 10px 10px 20px;
-    display: block;
-  }
-
-}
-
-/* 在大屏幕上应用特定样式 */
-@media screen and (min-width: 768px) {
-    #table-of-contents {
-        position: fixed; /* 固定定位，使其悬浮在页面上 */
-        top: 50%; /* 上边距为50% */
-        right: 15px; /* 右边距为0，将其放在右侧 */
-        transform: translateY(-50%); /* 使用transform来垂直居中 */
-        background-color: #f0f0f0; /* 设置背景颜色 */
-        padding: 10px; /* 添加一些内边距以增加可读性 */
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
-        width: 250px; /* 设置宽度 */
-        max-height: 70vh; /* 设置最大高度为视口的70% */
-        overflow-y: auto; /* 添加垂直滚动条 */
-    }
-}
 
 /* Sidenotes, based on https://scottstuff.net/posts/2024/12/16/sidenotes-in-hugo-with-fixit/ */
 span.sidenote {
@@ -283,4 +254,30 @@ figcaption {
 
 figure {
   margin: 0;
+}
+
+/* Small devices, phones */
+@media only screen and (max-width : 767px) {
+  #foxy {
+    min-width: 40px;
+    float: center;
+    padding: 10px 10px 10px 20px;
+    display: block;
+  }
+}
+
+/* Desktop styling */
+@media screen and (min-width: 768px) {
+    #table-of-contents {
+        position: fixed; /* 固定定位，使其悬浮在页面上 */
+        top: 50%; /* 上边距为50% */
+        right: 15px; /* 右边距为0，将其放在右侧 */
+        transform: translateY(-50%); /* 使用transform来垂直居中 */
+        background-color: #f0f0f0; /* 设置背景颜色 */
+        padding: 10px; /* 添加一些内边距以增加可读性 */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+        width: 250px; /* 设置宽度 */
+        max-height: 70vh; /* 设置最大高度为视口的70% */
+        overflow-y: auto; /* 添加垂直滚动条 */
+    }
 }
