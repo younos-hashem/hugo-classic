@@ -119,7 +119,7 @@ a {
   color: var(--accent-color-2);
 }
 
-a:hover {
+a:hover:not(.image-link) {
   background-color: var(--accent-color-3);
   border-radius: 4px;
   transition-property: background;
@@ -144,7 +144,7 @@ header nav {
     padding: 0 0.5rem
 }
 
-header a {
+header a:not(.image-link) {
 	color: #000000;
     line-height: 1.75rem;
     padding: 0 0.5rem
@@ -198,7 +198,7 @@ blockquote {
 }
 
 .content-wrapper {
-  padding: 0px 12px 0px 12px;
+  padding: 10px 12px 0px 12px;
 }
 #foxy {
   min-width: 40px;
@@ -301,4 +301,29 @@ figure {
         max-height: 70vh; /* 设置最大高度为视口的70% */
         overflow-y: auto; /* 添加垂直滚动条 */
     }
+}
+
+nav ul {
+  display: flex;
+  align-items: center;   /* vertically centers all items */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;             /* replaces any manual spacing between items */
+}
+
+/* push feed items to the right */
+nav ul li.pull-right {
+  margin-left: auto;
+}
+
+/* kill the float declarations if you had them */
+nav ul li.pull-left,
+nav ul li.pull-right {
+  float: none;
+}
+
+/* remove the inline gap under the image */
+.image-link img {
+  display: block;
 }
