@@ -46,8 +46,10 @@
           <li class="pull-right">
             <a href="{{ .URL }}">{{ .Name}}</a>
           </li>
+          <li class="pull-left">
+            {{ partial "toggle.html" . }}
+          </li>
           {{end}}
-
         </ul>
       </nav>
     </header>

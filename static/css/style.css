@@ -1,40 +1,20 @@
-/* Light mode */
-/* @media (prefers-color-scheme: light) {
-    blockquote {
-      background: #f9f9f9;
-    }
-
-    a {
-      color: #613DC1;
-    }
-
-    header {
-      background: #613DC1;
-    }
-
-    .article-meta, .menu a {
-      background: #E8DBC5;
-      color: #000;
-    }
-
-    table {
-      margin: auto;
-      border-top: 1px solid #666;
-      border-bottom: 1px solid #666;
-    }
-    table thead th { border-bottom: 1px solid #ddd; }
-    th, td { padding: 5px; }
-    tr:nth-child(even) { background: #eee }
-
-}
-*/
-
 :root {
-  --body-color: black;
-  --bg-color: #faf7f0;
-  --accent-color-1: #ff6e50;
-  --accent-color-2: #4f040b;
-  --accent-color-3: #ffd5c2;
+    --body-color: black;
+    --bg-color: #faf7f0;
+    --accent-color-1: #ff6e50;
+    --accent-color-2: #830714;
+    /* --accent-color-2: #4f040b; */
+    --accent-color-3: #ffd5c2;
+    --secondary-color: hsl(0, 0%, 60%);
+}
+
+body.dark-mode {
+  --body-color: hsl(0, 0%, 100%);
+  --bg-color: hsl(42, 50%, 4%);
+  --accent-color-1: hsl(10, 100%, 34%);
+  --accent-color-2: hsl(354, 90%, 73%);
+  /* --accent-color-2: #4f040b; */
+  --accent-color-3: hsl(19, 100%, 12%);
   --secondary-color: #666;
 }
 
@@ -73,16 +53,6 @@ input {
   font-family: Charter, 'Serif';
 }
 
-/* Table of Contents, if wanted
-
-Add to yaml:
-
-output:
-  blogdown::html_page:
-    toc: true
-
-    */
-
 #TableOfContents, #TOC {
   border: 1px solid #eee;
   border-radius: 5px;
@@ -90,14 +60,14 @@ output:
 
 /* Header and Footer */
 .menu li { display: inline-block; }
-.article-meta, .menu a {
+.article-meta, header a {
   text-decoration: none;
-  padding: 5px;
+  padding: 0px;
   border-radius: 5px;
   border-style: none;
   border-width: 1px;
   margin: 00px 0px 20px 0px;
-  color: var(--accent-color-1);
+  color: var(--body-color);
   position: static;
   right: unset;
 }
@@ -145,9 +115,8 @@ header nav {
 }
 
 header a:not(.image-link) {
-	color: #000000;
-    line-height: 1.75rem;
-    padding: 0 0.5rem
+  line-height: 1.75rem;
+  padding: 0 0.5rem
 }
 
 /* Code Boxes */
@@ -285,22 +254,6 @@ figure {
     padding: 10px 10px 10px 20px;
     display: block;
   }
-}
-
-/* Desktop styling */
-@media screen and (min-width: 768px) {
-    #table-of-contents {
-        position: fixed; /* 固定定位，使其悬浮在页面上 */
-        top: 50%; /* 上边距为50% */
-        right: 15px; /* 右边距为0，将其放在右侧 */
-        transform: translateY(-50%); /* 使用transform来垂直居中 */
-        background-color: #f0f0f0; /* 设置背景颜色 */
-        padding: 10px; /* 添加一些内边距以增加可读性 */
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
-        width: 250px; /* 设置宽度 */
-        max-height: 70vh; /* 设置最大高度为视口的70% */
-        overflow-y: auto; /* 添加垂直滚动条 */
-    }
 }
 
 nav ul {
